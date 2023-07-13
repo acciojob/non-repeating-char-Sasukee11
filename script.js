@@ -1,9 +1,12 @@
 //your JS code here. If required.
-const a = prompt('Enter a string');
-const arr = [...a];
-arr.sort();
-for(let i =0 ;i<arr.length-1;i++){
-	if(arr[i] !== arr[i+1]){
-		alert(arr[i]);
-	}
+const str = prompt("Enter a string");
+function firstNonRepeatingCharacter(str) {
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (str.indexOf(char) == i && str.indexOf(char, i + 1) == -1) {
+	    alert(char);
+		break;
+    }
+  }
 }
+firstNonRepeatingCharacter(str);
